@@ -7,8 +7,9 @@ import Achievement from "./sections/Achievement.jsx"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
 import Home from "./sections/Home"
-import Project from "./sections/Project"
+import MyWork from "./sections/MyWork"
 import Skills from "./sections/Skills"
+import Blog from "./sections/Blog"
 
 
 function App() {
@@ -19,28 +20,29 @@ function App() {
 
     <>
 
-    {!introDone && <IntroAnimation onFinish={()=> setIntroDone(true)}/>}    
+      {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
 
       {introDone && (
 
-    <div className="relative gradient text-white">
-      <CustomCursor/>
-    {/* <ParticlesBackground/> */}
+        <div className="relative gradient text-white">
+          <CustomCursor />
+          {/* <ParticlesBackground/> */}
 
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Project/>
-      <Achievement/>
-      {/* <Experience/>
+          <Navbar />
+          <Home />
+          <About />
+          <Skills />
+          <MyWork />
+          <Blog />
+          <Achievement />
+          {/* <Experience/>
       <Testimonials/> */}
-      <Contact/>
-      <Footer/>
+          <Contact />
+          <Footer />
 
-    </div>
+        </div>
 
-    )}
+      )}
 
 
     </>
